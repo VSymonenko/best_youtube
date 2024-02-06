@@ -16,6 +16,7 @@
   "author": "V.Symonenko",
   "license": "GPL-3.0-only",
   "devDependencies": {
+    "@types/chrome": "^0.0.260",
     "esbuild": "0.20.0"
   }
 }
