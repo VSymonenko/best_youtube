@@ -8,6 +8,7 @@ const PUBLIC_DIR = './public';
 try {
   await esbuild.build({
     outdir: OUT_DIR,
+    entryPoints: ['./src/background.js'],
   });
 } catch (e) {
   console.error(e);
