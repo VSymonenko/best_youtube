@@ -23,5 +23,9 @@
   },
   "wallaby": {
     "testframework": "vitest"
+  },
+  "dependencies": {
+    "@fortawesome/fontawesome-svg-core": "^6.5.1",
+    "@fortawesome/free-solid-svg-icons": "^6.5.1"
   }
 }
