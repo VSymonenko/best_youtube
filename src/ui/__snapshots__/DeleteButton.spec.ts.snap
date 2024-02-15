@@ -3,7 +3,7 @@
 exports[`should rendered correctly 1`] = `
 <button>
   <svg
-    aria-labelledby="svg-inline--fa-title-BYIfUIxjaqCF"
+    aria-labelledby="svg-inline--fa-title-vvvvvvvvvvvv"
     class="svg-inline--fa fa-trash"
     data-icon="trash"
     data-prefix="fas"
@@ -12,7 +12,7 @@ exports[`should rendered correctly 1`] = `
     xmlns="http://www.w3.org/2000/svg"
   >
     <title
-      id="svg-inline--fa-title-BYIfUIxjaqCF"
+      id="svg-inline--fa-title-vvvvvvvvvvvv"
     >
       Delete
     </title>
