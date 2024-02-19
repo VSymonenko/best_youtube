@@ -11,9 +11,10 @@ Project Description
 
 ### In Progress
 
-- [ ] run test with github actions  
+- [ ] add delete button to list  
 
 ### Done ✓
 
+- [x] run test with github actions  
 - [x] add delete button  
 
