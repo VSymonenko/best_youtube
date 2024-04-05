@@ -19,8 +19,8 @@
   "license": "GPL-3.0-only",
   "devDependencies": {
     "@playwright/test": "^1.41.2",
-    "@types/chrome": "^0.0.260",
-    "@types/node": "^20.11.18",
+    "@types/chrome": "^0.0.265",
+    "@types/node": "^20.12.4",
     "dotenv": "^16.4.5",
     "esbuild": "0.20.0",
     "jsdom": "^24.0.0",
