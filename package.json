@@ -22,7 +22,7 @@
     "@types/chrome": "^0.0.265",
     "@types/node": "^20.12.4",
     "dotenv": "^16.4.5",
-    "esbuild": "0.20.0",
+    "esbuild": "^0.20.2",
     "jsdom": "^24.0.0",
     "vitest": "^1.4.0"
   },

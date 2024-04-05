@@ -9,10 +9,10 @@ setup('authenticate', async ({ page }) => {
   await page.goto('https://www.youtube.com/');
   await page.getByLabel('Sign in').click();
   await page.getByLabel('Email or phone').fill(process.env.YOUTUBE_LOGIN);
-  console.log({ login: process.env.YOUTUBE_LOGIN});
   await page.getByRole('button', { name: 'Next' }).click();
-  const frame = page.frameLocator('iframe[title="reCAPTCHA"]');
-  const label = frame.locator('#recaptcha-anchor-label');
+  const frame = await page.frameLocator('iframe[title="reCAPTCHA"]');
+  const label = await frame.locator('#recaptcha-anchor-label');
+  console.log({ label, frame, page });
   if ((await label.isVisible()) && (await label.textContent())?.includes('not a robot')) {
     const captcha = frame.locator('#recaptcha-anchor');
     await captcha.click();
