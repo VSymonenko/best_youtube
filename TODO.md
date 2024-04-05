@@ -6,15 +6,16 @@ Project Description
 
 ### Todo
 
+- [ ] add delete button to list  
 - [ ] play video with max quality  
 - [ ] disable autoplay  
 
 ### In Progress
 
-- [ ] add delete button to list  
 
 ### Done ✓
 
+- [x] prepare youtube test page, authorize user, hide credentials, save session for next tests  
 - [x] run test with github actions  
 - [x] add delete button  
 
