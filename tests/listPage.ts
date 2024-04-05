@@ -1,6 +1,6 @@
 import type { Locator, Page } from '@playwright/test'
 
-export const URL = 'https://youtube.com';
+export const URL = 'https://youtube.com/';
 
 export class ListPage {
   readonly list: Locator;
