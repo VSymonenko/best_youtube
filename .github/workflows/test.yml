@@ -38,6 +38,9 @@ jobs:
       run: npx playwright install --with-deps
     - name: Run Playwright tests
       run: npm run test:e2e
+      env:
+        YOUTUBE_LOGIN: ${{ secrets.YOUTUBE_LOGIN }}
+        YOUTUBE_PASS: ${{ secrets.YOUTUBE_PASS }}
     - uses: actions/upload-artifact@v3
       if: always()
       with:
