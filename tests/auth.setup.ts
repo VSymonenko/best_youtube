@@ -1,25 +1,19 @@
 import 'dotenv/config';
 
-import { expect, test as setup } from '@playwright/test';
+import { test as setup } from '@playwright/test';
 
 const authFile = 'playwright/.auth/user.json';
-
-const sReverse = (s: string) => s.split('').reverse().join('');
 
 setup('authenticate', async ({ page }) => {
   // Perform authentication steps. Replace these actions with your own.
   await page.goto('https://www.youtube.com/');
   await page.getByLabel('Sign in').click();
-  const login = await page.getByLabel('Email or phone')
-  login.fill(process.env.YOUTUBE_LOGIN);
-  console.log({ login: sReverse(process.env.YOUTUBE_LOGIN)});
+  await page.getByLabel('Email or phone').fill(process.env.YOUTUBE_LOGIN);
   await page.getByRole('button', { name: 'Next' }).click();
+  const content = await page.content();
+  console.log(content);
   const frame = await page.frameLocator('iframe[title="reCAPTCHA"]');
   const label = await frame.locator('#recaptcha-anchor-label');
-  const input = await login.inputValue();
-  console.log(sReverse(input));
-  // FIXME log value from email input
-  // Maybe google redirect to another version of recaptcha
   if ((await label.isVisible()) && (await label.textContent())?.includes('not a robot')) {
     const captcha = frame.locator('#recaptcha-anchor');
     await captcha.click();
