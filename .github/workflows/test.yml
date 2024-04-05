@@ -22,7 +22,7 @@ jobs:
 
     - name: Test
       run: |
-        npm install
+        npm ci
         npm run test:unit
   test-e2e:
     timeout-minutes: 60
