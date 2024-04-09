@@ -21,14 +21,14 @@ setup('authenticate', async ({ page }) => {
   }
   await page.getByLabel('Enter your password').fill(process.env.YOUTUBE_PASS);
   await page.getByRole('button', { name: 'Next' }).click();
-  await page.screenshot({ path: 'playwright/.screen/youtube-login24.png'})
+  await page.screenshot({ path: 'playwright-screen/youtube-login24.png'})
   // Wait until the page receives the cookies.
   // Sometimes login flow sets cookies in the process of several redirects.
   // Wait for the final URL to ensure that the cookies are actually set.
   await page.waitForURL(/youtube/i);
-  await page.screenshot({ path: 'playwright/.screen/youtube-login29.png'})
+  await page.screenshot({ path: 'playwright-screen/youtube-login29.png'})
   await page.waitForSelector('#avatar-btn');
-  await page.screenshot({ path: 'playwright/.screen/youtube-login29.png'})
+  await page.screenshot({ path: 'playwright-screen/youtube-login29.png'})
 
   // End of authentication steps.
   await page.context().storageState({ path: authFile });
